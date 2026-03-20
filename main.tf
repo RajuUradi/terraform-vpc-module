@@ -22,6 +22,7 @@ resource "aws_subnet" "public" {
           # roboshop-dev-public-us-east-1a
        {Name="${var.project}-${var.environment}-public-${local.az_names[count.index]}"}
     )
+      map_public_ip_on_launch = true 
 }
 
 resource "aws_subnet" "private" {
